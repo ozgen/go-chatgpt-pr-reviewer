@@ -11,7 +11,7 @@ ChatGPT PR Reviewer is a Go-based command-line tool that integrates with GitHub 
 
 ## Prerequisites
 
-- Go 1.17 or later
+- Go 1.22 or later
 - A GitHub account with a personal access token.
 - An OpenAI account with API access.
 
