@@ -2,7 +2,7 @@
 BINARY_NAME := pr-reviewer
 
 build:
-	@go build -o bin/$(BINARY_NAME) cmd/main.go
+	@go build -o bin/$(BINARY_NAME) cmd/review/main.go
 
 test:
 	@go test -v ./...
