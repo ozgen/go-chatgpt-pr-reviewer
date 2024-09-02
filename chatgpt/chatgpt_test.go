@@ -2,7 +2,7 @@ package chatgpt
 
 import (
 	"encoding/json"
-	"go-chatgpt-pr-reviewer/types"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/types"
 	"net/http"
 	"net/http/httptest"
 	"testing"

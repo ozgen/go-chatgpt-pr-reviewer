@@ -3,7 +3,7 @@ package chatgpt
 import (
 	"bytes"
 	"encoding/json"
-	"go-chatgpt-pr-reviewer/types"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/types"
 	"io/ioutil"
 	"log"
 	"net/http"

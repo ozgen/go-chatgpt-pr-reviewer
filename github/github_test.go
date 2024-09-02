@@ -2,7 +2,7 @@ package github
 
 import (
 	"context"
-	"go-chatgpt-pr-reviewer/types"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/types"
 	"golang.org/x/oauth2"
 	"net/http"
 	"net/http/httptest"

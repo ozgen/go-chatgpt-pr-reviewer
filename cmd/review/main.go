@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-chatgpt-pr-reviewer/review"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/review"
 	"os"
 
 	"github.com/spf13/cobra"

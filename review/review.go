@@ -3,10 +3,10 @@ package review
 import (
 	"context"
 	"fmt"
-	"go-chatgpt-pr-reviewer/chatgpt"
-	"go-chatgpt-pr-reviewer/config"
-	"go-chatgpt-pr-reviewer/github"
-	"go-chatgpt-pr-reviewer/types"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/chatgpt"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/config"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/github"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/types"
 	"log"
 )
 

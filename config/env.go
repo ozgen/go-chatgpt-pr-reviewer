@@ -2,7 +2,7 @@ package config
 
 import (
 	"github.com/joho/godotenv"
-	"go-chatgpt-pr-reviewer/utils"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/utils"
 )
 
 type Config struct {

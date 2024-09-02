@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/google/go-github/v42/github"
-	"go-chatgpt-pr-reviewer/types"
+	"github.com/ozgen/go-chatgpt-pr-reviewer/types"
 	"golang.org/x/oauth2"
 	"os/exec"
 	"regexp"
