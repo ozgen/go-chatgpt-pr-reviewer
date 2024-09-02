@@ -1,4 +1,4 @@
-module go-chatgpt-pr-reviewer
+module github.com/ozgen/go-chatgpt-pr-reviewer
 
 go 1.22.5
 
