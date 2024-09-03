@@ -10,8 +10,9 @@ import (
 
 // Global variables to store flag values
 var (
-	localDir string
-	prNumber int
+	localDir     string
+	prNumber     int
+	postComments bool // Default is false
 )
 
 func main() {
@@ -20,13 +21,14 @@ func main() {
 		Use:   "review",
 		Short: "review is a CLI tool to review GitHub PRs using ChatGPT",
 		Run: func(cmd *cobra.Command, args []string) {
-			review.RunReview(localDir, prNumber)
+			review.RunReview(localDir, prNumber, postComments)
 		},
 	}
 
 	// Define flags
 	rootCmd.Flags().StringVar(&localDir, "local", "", "Local git repository directory")
 	rootCmd.Flags().IntVar(&prNumber, "pr", 0, "Pull Request number to review")
+	rootCmd.Flags().BoolVar(&postComments, "post-comments", false, "Post review comments to GitHub (default: false)")
 	rootCmd.MarkFlagRequired("local")
 	rootCmd.MarkFlagRequired("pr")
 
