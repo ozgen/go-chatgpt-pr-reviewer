@@ -10,7 +10,7 @@ import (
 	"log"
 )
 
-func RunReview(localDir string, prNumber int) {
+func RunReview(localDir string, prNumber int, postComments bool) {
 	// Load configuration
 	apiKey := config.Envs.OpenAIApiKey
 	organizationId := config.Envs.OrganizationId
@@ -63,7 +63,7 @@ func RunReview(localDir string, prNumber int) {
 
 			fmt.Printf("Feedback for file %s at line %d:\n%s\n", file.GetFilename(), modifiedLine.LineNumber, feedback)
 
-			if feedback != "" {
+			if feedback != "" && postComments {
 				commentBody := fmt.Sprintf("ChatGPT suggests:\n%s", feedback)
 				path := file.GetFilename()
 				err = github.PostReviewComment(ctx, githubClient, owner, repo, prNumber, commentBody, path, modifiedLine.LineNumber)

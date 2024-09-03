@@ -1,7 +1,8 @@
-
 # ChatGPT PR Reviewer
 
-ChatGPT PR Reviewer is a Go-based command-line tool that integrates with GitHub and OpenAI's ChatGPT to perform automated code reviews on pull requests (PRs). The tool fetches changes from a specified PR, sends the modified code blocks to ChatGPT for review, and posts the feedback as comments on the PR.
+ChatGPT PR Reviewer is a Go-based command-line tool that integrates with GitHub and OpenAI's ChatGPT to perform
+automated code reviews on pull requests (PRs). The tool fetches changes from a specified PR, sends the modified code
+blocks to ChatGPT for review, and posts the feedback as comments on the PR.
 
 ## Features
 
@@ -22,7 +23,7 @@ ChatGPT PR Reviewer is a Go-based command-line tool that integrates with GitHub 
    Use the following command to install the `review` CLI tool:
 
    ```bash
-   go install github.com/ozgen/go-chatgpt-pr-reviewer/cmd/review@v1.0.3
+   go install github.com/ozgen/go-chatgpt-pr-reviewer/cmd/review@v1.0.4
    ```
 
 This will download and build the CLI tool, placing the `review` binary in your `GOPATH/bin` or `GOBIN` directory.
@@ -48,7 +49,7 @@ This will download and build the CLI tool, placing the `review` binary in your `
 Once installed, you can use the `review` command to perform a code review on a pull request:
 
 ```bash
-review --local "/path/to/local/repo" --pr 1
+review --local "/path/to/local/repo" --pr 1 [--post-comments]
 ```
 
 - `--local` specifies the path to your local Git repository.
@@ -67,11 +68,20 @@ review --local "/path/to/local/repo" --pr 1
 
 2. **Run the Review Command**:
 
+   To run the review without posting comments (default behavior):
+
    ```bash
    review --local "/Users/ozgen/Desktop/checkstyle-runner" --pr 1
    ```
 
-   This command will fetch the changes from PR #1 in the specified local repository, send the changes to ChatGPT for review, and post the feedback as comments on the PR.
+To run the review and post comments to GitHub:
+
+   ```bash
+   review --local "/Users/ozgen/Desktop/checkstyle-runner" --pr 1 --post-comments 
+   ```
+
+This command will fetch the changes from PR #1 in the specified local repository, send the changes to ChatGPT for
+review, and post the feedback as comments on the PR.
 
 ## Development
 
